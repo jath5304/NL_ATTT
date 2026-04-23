@@ -22,14 +22,31 @@ Dự án nghiên cứu và triển khai hệ thống phát hiện mã độc (Ma
 ## 📁 Cấu trúc thư mục
 
 ```text
-├── models/                     # Chứa các file mô hình đã huấn luyện (.pkl)
-├── data/                       # Tài liệu liên quan đến tập dữ liệu EMBER
-├── src/
+├── LightGBM/                     
+    ├──final_lgb_model.pkl
+    └── lightgbm_train.py
+├── randomforest
+    ├──rf_tuning.py
+    └── rf_train.py
+├── XGBoost
+    ├── boosting_tuning.py
+    └── xgboost_train.py
+├── dataset ember/                       # Tài liệu liên quan đến tập dữ liệu EMBER
+    ├──__init__.py
+    └── reatures.py
+├── preprocess/
 │   ├── feature_extractor.py    # Lõi trích xuất đặc trưng từ file PE
-│   └── ember_inference_pipeline.pkl # File cấu hình tiền xử lý dữ liệu
-├── app.py                      # File chạy ứng dụng giao diện Web (Streamlit)
-├── requirements.txt            # Danh sách các thư viện cần cài đặt
-└── README.md                   # Hướng dẫn dự án
+    ├── dothua_data.py
+    ├── extract_data.py
+    ├── phan_bo_data.py
+    ├── phantichPCA.py
+    ├── split_data.py
+    ├── thongkesochieu.py
+    ├── tien_xuly.py
+    ├── variance_analysis.py
+│   └── ember_inference_pipeline.pkl 
+├── app.py                      # File chạy ứng dụng giao diện Web 
+└── readme.md                   # Hướng dẫn dự án
 
 ##⚙️ Cài đặt và Sử dụng
 ## Thu thập và Xử lý Dữ liệu thô
